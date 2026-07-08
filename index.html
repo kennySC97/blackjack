@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack - Juego de Casino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎴 Black Jack</h1>
+            <div class="balance-display">
+                <h3>Balance: $<span id="balance">1000</span></h3>
+            </div>
+        </div>
+        
+        <!-- Single Main Game Container -->
+        <div class="main-game-container">
+            <!-- Cards Area (Left) -->
+            <div class="cards-area">
+                <!-- Croupier's Section -->
+                <div class="dealer-section">
+                    <h2>Croupier</h2>
+                    <div class="card-row">
+                        <div id="dealer-cards" class="cards-container"></div>
+                        <div id="dealer-score" class="score-display">0</div>
+                    </div>
+                </div>
+                
+                <!-- Deck Section -->
+                <div class="deck-section">
+                    <div class="deck-stack">
+                        <div class="deck-card card-back"></div>
+                        <div class="deck-card card-back"></div>
+                        <div class="deck-card card-back"></div>
+                        <div class="deck-card card-back"></div>
+                        <div class="deck-card card-back"></div>
+                    </div>
+                </div>
+                
+                <!-- Player's Section -->
+                <div class="player-section">
+                    <h2>Jugador</h2>
+                    <div class="card-row">
+                        <div id="player-cards" class="cards-container"></div>
+                        <div id="player-score" class="score-display">0</div>
+                    </div>
+                </div>
+                
+                <!-- Game Controls at Bottom -->
+                <div class="game-controls">
+                    <button id="start-btn" class="btn">Repartir</button>
+                    <button id="hit-btn" class="btn" disabled>Pedir Carta</button>
+                    <button id="stand-btn" class="btn" disabled>Quedarse</button>
+                </div>
+            </div>
+            
+            <!-- Chips Area (Right, Vertical -->
+            <div class="chips-area">
+                <h3>Apuesta Actual: $<span id="current-bet">0</span></h3>
+                <div class="chips-container-vertical" id="chips-container"></div>
+                <button id="clear-bet" class="btn btn-secondary clear-bet-btn">✕</button>
+            </div>
+        </div>
+        
+        <div id="message" class="message"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
